@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/landing-page-prova/",
+    "build-css": "tailwindcss build style.css -o output.css",
     "preview": "vite preview --base=/landing-page-prova/"
   },
   "devDependencies": {
