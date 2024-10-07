@@ -7,9 +7,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                projects: resolve(__dirname, 'idiomes.html'),
-                projects: resolve(__dirname, 'programacio.html'),
-                projects: resolve(__dirname, 'login.html'),
+                idiomes: resolve(__dirname, 'idiomes.html'),
+                programacio: resolve(__dirname, 'programacio.html'),
+                login: resolve(__dirname, 'login.html'),
             },
         },
     },
