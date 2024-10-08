@@ -1,7 +1,7 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-on:  
+on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
@@ -34,7 +34,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 20.6.1
           cache: 'npm'
       - name: Install dependencies
         run: npm install
