@@ -5,9 +5,8 @@
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sobre Mi">
-    <title>Vite App</title>
+    <title>Dani Bengochea</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -127,7 +126,60 @@
     });
 </script>
 
+<main>
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <div class="image-container">
+                <img src="java.png" alt="Logo de Java">
+            </div>
+            <p><strong>Serveis que oferim amb Java:</strong> Desenvolupem aplicacions a mida per a mòbils i escriptori, així com manteniment i optimització de codi existent. Assegurem una integració fluida i ràpida de les teves aplicacions Java a qualsevol entorn tecnològic.</p>
+        </div>
 
+        <div class="carousel-slide">
+            <div class="image-container">
+                <img src="html.png" alt="Logo d'HTML">
+            </div>
+            <p><strong>Serveis que oferim amb HTML:</strong> Desenvolupem pàgines web responsives i accessibles que utilitzen les últimes característiques d'HTML5, garantint que el teu contingut arribi al màxim públic possible.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="image-container">
+                <img src="css.png" alt="Logo de CSS">
+            </div>
+            <p><strong>Serveis que oferim amb CSS:</strong> Creem dissenys atractius i funcionals amb CSS, incloent-hi la creació de temes personalitzats, animacions dinàmiques i dissenys responsius per a qualsevol dispositiu.</p>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="image-container">
+                <img src="php.png" alt="Logo de PHP">
+            </div>
+            <p><strong>Serveis que oferim amb PHP:</strong> Ofereixo desenvolupament d'aplicacions web dinàmiques amb PHP, incloent la creació de sistemes de gestió de continguts, integració de bases de dades i solucions personalitzades per a les teves necessitats empresarials.</p>
+        </div>
+
+        <div class="carousel-nav">
+            <button id="prevBtn">← Anterior</button>
+            <button id="nextBtn">Següent →</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].classList.add('active');
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+    });
+</script>
 <div class="overflow-hidden bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -140,6 +192,7 @@
         </div>
     </div>
 </div>
+
 
 <footer class="bg-white dark:bg-gray-900">
     <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">

@@ -11,7 +11,7 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    font-size: 2em; /* Canviat de 2 em a 2em */
+    font-size: 2em;
     margin-bottom: 20px;
 }
 main {
@@ -29,17 +29,78 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex: 0 0 48%; /* Dos a l'esquerra i dos a la dreta */
-    align-items: center; /* Centra el contingut horitzontalment */
+    flex: 0 0 48%;
+    align-items: center; /* Centra només la imatge i el contingut */
 }
 .language-section img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 10px; /* Espai entre la imatge i el text */
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto; /* Centra la imatge horitzontalment */
+    margin-right: auto; /* Centra la imatge horitzontalment */
 }
+.image-container {
+    display: flex; /* Utilitza flexbox per al centrament */
+    justify-content: center; /* Centra l'element horitzontalment */
+    margin: 20px 0; /* Espai addicional a dalt i a baix si és necessari */
+}
+
+.image-container img {
+    max-width: 100%; /* Assegura que la imatge no excedeixi l'ample del contenidor */
+    height: auto; /* Manté l'aspecte de la imatge */
+}
+
 p {
     color: #555;
-    flex-grow: 1; /* Permet al paràgraf ocupar espai addicional */
-    text-align: left; /* Centra el text */
+    flex-grow: 1;
+    text-align: left; /* Manté el text alineat a l'esquerra */
+}
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.carousel-slide p {
+    margin: 10px 0;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carousel-nav button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-nav button:hover {
+    background-color: #0056b3;
 }
